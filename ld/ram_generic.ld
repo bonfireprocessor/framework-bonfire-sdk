@@ -46,7 +46,8 @@ ENTRY( _start )
    idt32.ld includes it explicitly here and I was seeing link errors
    without it. */
 
-GROUP( -lc -lgloss -lgcc )
+/*GROUP( -lc -lgloss -lgcc )*/
+GROUP( -lc -lgcc )
 
 /*----------------------------------------------------------------------*/
 /* Sections                                                             */
