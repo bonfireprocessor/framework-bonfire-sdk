@@ -1,8 +1,6 @@
 #ifndef ULX3S_PLATFORM_H
 #define ULX3S_PLATFORM_H
 
-#pragma message "ULX3S platform"
-
 // New Defintions for new bonfire-soc-io core
 #define IO_BASE 0x04000000
 #define SOC_IO_OFFSET 0x10000 // Offset from one I/O Device to the next (64K range)
@@ -24,7 +22,9 @@
 #define SRAM_TOP  (SRAM_BASE+SRAM_SIZE-1)
 
 //#define SYSCLK 96000000
+#ifndef SYSCLK
 #define SYSCLK 62500000  // 62.5 MHz 
+#endif 
 
 #define CLK_PERIOD (1e+9 / SYSCLK)  // in ns...
 

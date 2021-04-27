@@ -35,9 +35,9 @@
 OUTPUT_ARCH( "riscv" )
 
 /* The ENTRY command specifies the entry point (ie. first instruction to
-   execute). The symbol _start is defined in crt0.S */
+   execute). */
 
-ENTRY( _start )
+ENTRY( _bonfire_init )
 
 /* The GROUP command is special since the listed archives will be
    searched repeatedly until there are no new undefined references. We
