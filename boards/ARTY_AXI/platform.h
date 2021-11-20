@@ -52,6 +52,7 @@
 
 #define SYSCLK  83333333
 
+#define PLATFORM_BAUDRATE 500000
 
 
 #define CLK_PERIOD (1e+9 / SYSCLK)  // in ns...

@@ -1,5 +1,5 @@
 .section .init
-.global _bonfire_init
+.weak _bonfire_init
 
 
 .extern _start
