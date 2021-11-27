@@ -95,6 +95,8 @@ static uint16_t l_divisor=0;
 static inline void _setDivisor(uint32_t divisor){
 
    l_divisor = divisor;
+  //avoid chaning Baudrate while transmit in progress transmitter ready
+   while (!(uartadr[UART_STATUS] & 0x2)); 
    uartadr[UART_CONTROL]= 0x030000L | (uint16_t)divisor; // Set Baudrate divisor and enable port and set extended mode
 }
 

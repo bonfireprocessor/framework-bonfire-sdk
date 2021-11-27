@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <errno.h>
 #include "uart.h"
+#include <unistd.h>
+#include "console.h"
 
 
 #undef errno
@@ -95,3 +97,21 @@ void * _sbrk (int nbytes)
       return  (void *) -1;
     }
 }       /* _sbrk () */
+
+
+
+int _kill (int pid, int sig)
+{
+  return ENOENT;
+}
+
+
+int _getpid()
+{
+  return ENOENT;
+}
+
+time_t _gettimeofday()
+{
+    return 0;
+}
