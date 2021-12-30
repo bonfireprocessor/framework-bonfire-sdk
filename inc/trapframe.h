@@ -6,12 +6,12 @@
 
 typedef struct
 {
-  long gpr[32];
-  long status;
-  long epc;
-  long badvaddr;
-  long cause;
-  long insn;
+  uint32_t gpr[32];
+  uint32_t status;
+  uint32_t epc;
+  uint32_t badvaddr;
+  uint32_t cause;
+  uint32_t insn;
 } trapframe_t;
 
 #endif

@@ -118,3 +118,17 @@ char *p;
    write_console("\n");
    return p-b; // len
 }
+
+void hex_dump(void *mem,int numWords)
+{
+uint32_t *pmem = mem;
+int i;
+
+    for(i=0;i<numWords;i++) {
+      if ((i % 4)==0) { // Write Memory address for every four words
+        printk("\n%lx    ",(uint32_t)&pmem[i]);
+      }
+      printk("%lx ",pmem[i]);
+      //writeHex(pmem[i]);
+    }
+}

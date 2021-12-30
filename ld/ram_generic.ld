@@ -264,7 +264,10 @@ SECTIONS
   _end = ALIGN(8);
   end = .;  __end = .;
 
-  _stacktop =  __top;
+  /* calcualte addreses space for the different stacks */
+  _irqstack = __top;
+  _trapstack = _irqstack - __irq_stacksize; 
+  _stacktop =  _trapstack - __trap_stacksize;
   _endofheap = _stacktop - __stacksize;
                 
 }

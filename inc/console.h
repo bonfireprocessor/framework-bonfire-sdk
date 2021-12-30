@@ -13,6 +13,7 @@ void dump_tf(trapframe_t* tf);
 void do_panic(const char* s, ...);
 void kassert_fail(const char* s);
 int readBuffer(char *b,int sz);
+void hex_dump(void *mem,int numWords);
 
 
 #endif
